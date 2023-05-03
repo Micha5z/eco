@@ -6,8 +6,10 @@ const ContactContainer = styled.div`
   display: flex;
   flex-direction: row;
   background-image: url('https://img.freepik.com/free-photo/beautiful-scenery-river-surrounded-by-greenery-forest_181624-40482.jpg?w=996&t=st=1682258054~exp=1682258654~hmac=89c9bfa9493b23eac21614ce07e41897da7a9ca0beba7b307dc9f80ddd527eff');
-  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 3rem;
   position: relative;
   overflow: hidden;

@@ -92,6 +92,34 @@ const StyledTradeLink = styled.a`
   }
 `
 
+const StyledButton2 = styled.button`
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  path {
+    fill: ${({ theme, open, showBG }) => (showBG && !open ? theme.textColor : 'white')};
+  }
+  color: ${({ theme, open, showBG }) => (showBG && !open ? theme.textColor : 'white')};
+  
+  :focus {
+    outline: none;
+  }
+  display: none;
+  align-items: center;
+  justify-content: center;
+  :hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 960px) {
+    display: flex;
+    path {
+      fill: ${({ theme }) => (theme.textColor)};
+    }
+    color: ${({ theme }) => (theme.textColor)};  
+  }
+  margin-right:10px;
+`
+
 const StyledButton = styled.button`
   border: none;
   background-color: rgba(0, 0, 0, 0);
@@ -225,9 +253,21 @@ const Header = () => {
           />
         </StyledHomeLink>
       </StyledNavTitleWrapper>
+
+      <StyledButton2 target="_blank" open={isMenuOpen} showBG={headerBG}
+          href="https://facebook.pl">
+          {<Facebook size={20}/>}
+        </StyledButton2>
+
+        <StyledButton2 target="_blank" open={isMenuOpen} showBG={headerBG}
+          href="https://instagram.pl">
+          {<Instagram size={20}/>}
+        </StyledButton2>
+
       <MenuToggle ref={button} open={isMenuOpen} onClick={() => updateIsMenuOpen(!isMenuOpen)}>
         {isMenuOpen ? <StyledCloseIcon /> : <StyledMenuIcon />}
       </MenuToggle>
+      
       <StyledNav ref={node} open={isMenuOpen}>
         {data.site.siteMetadata.menulinks.map(item => {
           return <Menu key={item.name} data={item} />

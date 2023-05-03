@@ -7,7 +7,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Eko-zakatek`,
-    description: `Turn website into app`,
+    description: `Rent your dream house`,
     author: `@Eko-zakatek`,
     menulinks: menu,
     siteUrl: `https://Eko-zakatek/`,

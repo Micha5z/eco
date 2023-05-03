@@ -7,6 +7,7 @@ import BG from "../components/bg"
 import BrandInfo from '../components/infoSection';
 import Offer from '../components/offerSection';
 import Contact from '../components/contact';
+import Slider from '../components/slider';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const StyledBody = styled.div`
@@ -98,38 +99,47 @@ const scrollToBottom = () => {
 const IndexPage = props => {
   return (
     <Layout path={props.location.pathname}>
-      <SEO title='Wynajem domków Ostry' path={props.location.pathname} description='Wynajmij eko domek' />
+      <SEO title='Wynajem domków Ostry' path={props.location.pathname} description='Wynajmij swój eko domek' />
       <BG />
       <StyledBody>
        {/* <StyledCarouselContainer>
          <FullWidthCarousel items={items} />
         </StyledCarouselContainer> */}
+
+        {/* <Slider /> */}
+
         <div style={{
           backgroundImage: `url("https://dag08uxs564ub.cloudfront.net/images/mountain-hut-in-polish-mountains.max-1280x768.jpg")`,
           height: '70vh',
           width: '100%',
+          marginTop: '-80px',
+          position: 'relative',
+          backgroundAttachment: 'fixed',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
-          marginTop: '-80px',
           // marginBottom: 60,
         }}>
-          <div style={{
-          height: '100%',
-          width: '100%',
-          background: 'black',
-          opacity: 0.8,
-        }}>
+          <div style={{ zIndex: 1, position: 'absolute', top: 0, width: '100%' }}>
           <Title>
           Escape to an eco-friendly oasis is more than just a catchy slogan.
-
-
           </Title>
             <StyledTradeLink>
              <div className="" onClick={scrollToBottom}>
               Rezerwuj!
              </div>
             </StyledTradeLink>
+            </div>
 
+          <div style={{
+            height: '100%',
+            width: '100%',
+            background: 'black',
+            opacity: 0.8,
+            position: 'absolute',
+            top: 0,
+        }}>
+            
           </div>
         </div>
         <BrandInfo />
