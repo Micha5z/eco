@@ -112,7 +112,7 @@ function BrandInfo() {
                 </div>
               </div>
               {/* <a class ="button" href="/about">Więcej</a> */}
-              <StyledTradeLink2 href="/about">
+              <StyledTradeLink2 href="/noclegi">
               Więcej
             </StyledTradeLink2>
             </Col>
@@ -124,7 +124,7 @@ function BrandInfo() {
                   <p>Our cottages are nestled near the picturesque mountains and forests, providing a tranquil retreat for nature lovers. Explore the hiking trails, observe the wildlife, and immerse yourself in nature's beauty.</p>
                 </div>
               </div>
-              <StyledTradeLink to="/about">
+              <StyledTradeLink to="/zeroWaste">
              <div className="">
               Więcej
              </div>
@@ -138,7 +138,7 @@ function BrandInfo() {
                   <p>Escape the hustle and bustle of city life and indulge in some well-deserved relaxation. Our cottages offer a serene ambiance, comfortable amenities, and breathtaking views, ensuring a memorable getaway.</p>
                 </div>
               </div>
-              <StyledTradeLink to="/about">
+              <StyledTradeLink to="/warsztaty">
              <div className="">
               Więcej
              </div>

@@ -29,7 +29,7 @@ const Title = styled.h1`
   }
 `
 
-const AboutPage = props => {
+const NoclegiPage = props => {
 
   return (
     <Layout path={props.location.pathname}>
@@ -44,4 +44,4 @@ const AboutPage = props => {
     </Layout>
   )
       }
-export default AboutPage
+export default NoclegiPage
