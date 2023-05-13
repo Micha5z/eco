@@ -8,7 +8,7 @@ const StyledBG = styled.div`
   left: 0;
   width: 100%;
   overflow: hidden;
-  background-color: ${({ theme }) => theme.backgroundColor};
+  background-color: ${({ theme }) => theme.colors.blackWhite};
   -webkit-transform: translate3d(0, 0, 0);
   height: -webkit-fill-available;
   opacity: 1;

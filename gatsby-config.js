@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Eko-zakatek`,
     description: `Rent your dream house`,
-    author: `@Eko-zakatek`,
+    author: `@Michasz`,
     menulinks: menu,
     siteUrl: `https://Eko-zakatek/`,
     repository: `https://github.com/web2app-app/app-v1`,
@@ -74,9 +74,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-twitter-cards`,
             options: {
-              title: 'Eko-zakatek', // website title
+              title: 'Eko-Zakatek', // website title
               separator: '|', // default
-              author: '@Eko-zakatek',
+              author: 'Michasz',
               // background: require.resolve('./static/images/twitter_card.png'), // path to 1200x630px file or hex code, defaults to black (#000000)
               fontColor: '#663399', // defaults to white (#ffffff)
               fontStyle: 'sans-serif', // default

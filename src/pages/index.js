@@ -21,7 +21,6 @@ const StyledBody = styled.div`
   // }
 `;
 
-
 const items = [
   {
     src: 'https://dag08uxs564ub.cloudfront.net/images/mountain-hut-in-polish-mountains.max-1280x768.jpg',
@@ -60,24 +59,47 @@ const Title = styled.h1`
 
   @media (max-width: 960px) {
     font-size: 2rem;
+    padding-top: 100px;
+  }
+`
+const SubTitle = styled.h2`
+  width: 100%;
+  font-size: 2.5rem;
+  pointer-events: none;
+  white-space: wrap;
+  overflow-wrap: normal;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: white;
+  margin-top: 0.5rem;
+
+  @media (max-width: 960px) {
+    font-size: 1.8rem;
   }
 `
 
 const StyledTradeLink = styled.a`
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
   cursor: pointer;
-  padding: 0.7rem 0.95rem;
+  font-size: 1rem;
+  padding: 1.2rem 1.7rem;
   background-color: ${({ theme }) => theme.textColor};
   background: linear-gradient(128.17deg,#36c557 -14.78%,#114426 110.05%);
   text-decoration: none;
   color: white;
-  border-radius: 22px;
+  border-radius: 25px;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 600;
   width: 100%;
   overflow-wrap: normal;
   width: min-content;
   white-space: wrap;
   margin-left: 50%;
+  margin-top: 40px;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
   border: 1px solid transparent;
@@ -86,6 +108,22 @@ const StyledTradeLink = styled.a`
   :focus {
     border: 1px solid white;
     color: white;
+  }
+`
+
+const BGImage = styled.div`
+  background-image: url("https://dag08uxs564ub.cloudfront.net/images/mountain-hut-in-polish-mountains.max-1280x768.jpg");
+  height: 70vh;
+  width: 100%;
+  margin-top: -80px;
+  position: relative;
+  // background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 961px) {
+    background-attachment: fixed;
   }
 `
 
@@ -108,40 +146,30 @@ const IndexPage = props => {
 
         {/* <Slider /> */}
 
-        <div style={{
-          backgroundImage: `url("https://dag08uxs564ub.cloudfront.net/images/mountain-hut-in-polish-mountains.max-1280x768.jpg")`,
-          height: '70vh',
-          width: '100%',
-          marginTop: '-80px',
-          position: 'relative',
-          backgroundAttachment: 'fixed',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'cover',
-          // marginBottom: 60,
-        }}>
+        <BGImage>
           <div style={{ zIndex: 1, position: 'absolute', top: 0, width: '100%' }}>
-          <Title>
-          Escape to an eco-friendly oasis is more than just a catchy slogan.
-          </Title>
+            <Title>
+            Twój górski azyl czeka na Ciebie! 
+            <SubTitle>Wynajmij wyjątkowy domek w Eko Zakątku i poczuj </SubTitle>
+            <SubTitle>magię natury!</SubTitle>
+            </Title>
+            
             <StyledTradeLink>
              <div className="" onClick={scrollToBottom}>
-              Rezerwuj!
+              Rezerwuj
              </div>
             </StyledTradeLink>
-            </div>
-
+          </div>
           <div style={{
             height: '100%',
             width: '100%',
             background: 'black',
-            opacity: 0.8,
+            opacity: 0.6,
             position: 'absolute',
             top: 0,
-        }}>
-            
+          }}>
           </div>
-        </div>
+        </BGImage>
         <BrandInfo />
         <Offer />
         <Contact />

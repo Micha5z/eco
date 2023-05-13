@@ -69,6 +69,7 @@ const StyledNavTitleWrapper = styled.nav`
   display: flex;
   align-items: center;
   width: 100%;
+  
 `
 
 const StyledTradeLink = styled.a`
@@ -150,6 +151,7 @@ const StyledHomeLink = styled(Link)`
   max-height: 48px;
   display: flex;
   align-items: center;
+  color: re
 `
 
 const MenuToggle = styled.button`

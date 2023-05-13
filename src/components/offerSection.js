@@ -115,20 +115,26 @@ function Offer() {
 
   const images = [
     {
-      src: 'https://oswietlenie-sklep.pl/images/watermark/wpx_338b54c29198f0c0e48052581c1b00ab.jpg',
+      src: 'https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/oferta_domkow_zdj%2FIMG_9198%201.jpg?alt=media&token=b8b017f1-4f3b-450a-bda0-5638a91a004b',
       alt: 'Mountain Cottage 1',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam tempus mauris dolor, eu feugiat est rutrum a. Donec quis nulla id justo faucibus volutpat sit amet eu mauris. Quisque efficitur malesuada est, non hendrerit sem eleifend in. Nunc sagittis malesuada velit vitae aliquam. Fusce interdum nulla libero, vel pulvinar lectus egestas a.'
     },
     {
-      src: 'https://img.shmbk.pl/rimgsph/1205424_5879d814-3c81-4889-86c2-b4807e44dcae_crop_1280_768_kawalerka-boho-salon-styl-vintage.jpg',
+      src: 'https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/oferta_domkow_zdj%2FIMG_9208%20(1)%201.jpg?alt=media&token=406524ec-5c89-44d3-a516-d24d30f01128',
       alt: 'Mountain Cottage 2',
       text: 'Duis pellentesque, est ac mattis sagittis, ipsum leo blandit nibh, in molestie justo enim vitae nulla. Sed pellentesque vel est non viverra. Nunc laoreet tellus id urna consequat vestibulum. Nullam nec consectetur mauris, a elementum mauris. Fusce venenatis eros at ligula pharetra ullamcorper. Sed ac consequat purus.'
     },
     {
-      src: 'https://dag08uxs564ub.cloudfront.net/images/mountain-hut-in-polish-mountains.max-1280x768.jpg',
+      src: 'https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/oferta_domkow_zdj%2FIMG_9214.jpg?alt=media&token=ef80bb3c-da12-4c96-8456-04f7fe85d219',
       alt: 'Mountain Cottage 3',
       text: 'Nulla ut orci aliquet, porttitor elit et, accumsan elit. Sed in libero dolor. Etiam bibendum enim libero, ac lacinia odio malesuada quis. Nam volutpat orci augue, nec lobortis augue sollicitudin ut. Nullam fringilla, tortor vel scelerisque malesuada, est lorem efficitur nunc, sit amet gravida turpis magna non nisi.'
     },
+    {
+      src: 'https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/oferta_domkow_zdj%2FIMG_9201%201.jpg?alt=media&token=36f01195-138b-4a38-bcd3-1ed490c5b19a',
+      alt: 'Mountain Cottage 3',
+      text: 'Nulla ut orci aliquet, porttitor elit et, accumsan elit. Sed in libero dolor. Etiam bibendum enim libero, ac lacinia odio malesuada quis. Nam volutpat orci augue, nec lobortis augue sollicitudin ut. Nullam fringilla, tortor vel scelerisque malesuada, est lorem efficitur nunc, sit amet gravida turpis magna non nisi.'
+    },
+
   ];
 
   const handlePrev = () => {

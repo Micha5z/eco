@@ -20,7 +20,7 @@ const StyledMenu = styled.button`
   border: none;
   text-align: left;
   list-style: none;
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ theme }) => theme.menuBG};
 
 
   /* padding-right: 2rem; */
@@ -113,7 +113,7 @@ const StyledMenuTitle = styled.span`
   :hover nav,
   &:focus-within nav,
   nav:hover {
-    width: auto;
+    width: max-content;
     height: auto;
     max-height: 1500px;
     padding: 1rem;
