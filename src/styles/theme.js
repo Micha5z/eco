@@ -21,9 +21,9 @@ const black = '#000000'
 export const theme = darkMode => ({
   white,
   black,
-  textColor: darkMode ? white : '#010101',
-  invertedTextColor: darkMode ? '#010101' : white,
-  greyText: darkMode ? white : '#6C7284',
+  textColor: darkMode ? '#e8e8e8' : '#010101',
+  invertedTextColor: darkMode ? '#010101' : '#e8e8e8',
+  greyText: darkMode ? '#e8e8e8' : '#6C7284',
   buttonBorder: darkMode ? `#FFFFFF30` : '#01010130',
   buttonBorderHover: darkMode ? `#FFFFFF60` : '#01010160',
 
@@ -82,8 +82,8 @@ export const theme = darkMode => ({
     white: '#FFFFFF',
     black: '#000000',
 
-    whiteBlack: darkMode ? '#FFFFFF' : '#000000',
-    blackWhite: darkMode ? '#000000' : '#FFFFFF',
+    whiteBlack: darkMode ? '#F7F8FA' : '#0f1013',
+    blackWhite: darkMode ? '#0f1013' : '#F7F8FA',
 
     green1: '#E6F3EC',
     green2: '#27AE60',

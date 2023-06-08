@@ -7,10 +7,10 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Eko-zakatek`,
-    description: `Rent your dream house`,
+    description: `Rent your dream cottage`,
     author: `@Michasz`,
     menulinks: menu,
-    siteUrl: `https://Eko-zakatek/`,
+    siteUrl: `https://eko-zakatek/`,
     repository: `https://github.com/web2app-app/app-v1`,
     commit: process.env.NOW_GITHUB_COMMIT_SHA || `main`
   },
@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://Eko-zakatek`
+        siteUrl: `https://eko-zakatek`
       }
     },
     {

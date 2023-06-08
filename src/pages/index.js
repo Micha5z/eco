@@ -59,7 +59,7 @@ const Title = styled.h1`
 
   @media (max-width: 960px) {
     font-size: 2rem;
-    padding-top: 100px;
+    padding-top: 150px;
   }
 `
 const SubTitle = styled.h2`
@@ -73,7 +73,7 @@ const SubTitle = styled.h2`
   margin-right: auto;
   text-align: center;
   color: white;
-  margin-top: 0.5rem;
+  margin-top: 20px;
 
   @media (max-width: 960px) {
     font-size: 1.8rem;
@@ -81,6 +81,7 @@ const SubTitle = styled.h2`
 `
 
 const StyledTradeLink = styled.a`
+  display: block;
   font-weight: bold;
   letter-spacing: 5px;
   text-transform: uppercase;
@@ -88,20 +89,18 @@ const StyledTradeLink = styled.a`
   font-size: 1rem;
   padding: 1.2rem 1.7rem;
   background-color: ${({ theme }) => theme.textColor};
-  background: linear-gradient(128.17deg,#36c557 -14.78%,#114426 110.05%);
+  background: linear-gradient(269deg,#36c557 -14.78%,#114426 110.05%);
   text-decoration: none;
   color: white;
-  border-radius: 25px;
-  display: inline-block;
+  border-radius: 55px;
   font-weight: 600;
   width: 100%;
   overflow-wrap: normal;
   width: min-content;
   white-space: wrap;
-  margin-left: 50%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 40px;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
   border: 1px solid transparent;
   box-shadow: ${({ theme }) => theme.shadows.small};
   :hover,
@@ -112,12 +111,13 @@ const StyledTradeLink = styled.a`
 `
 
 const BGImage = styled.div`
-  background-image: url("https://dag08uxs564ub.cloudfront.net/images/mountain-hut-in-polish-mountains.max-1280x768.jpg");
-  height: 70vh;
+  background-image: url("https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/oferta_domkow_zdj%2Fbaner2.webp?alt=media&token=778ca00c-8c45-45f9-a109-d08af8c833fd");
+  // height: 70vh;
   width: 100%;
-  margin-top: -80px;
+  margin-top: -110px;
   position: relative;
   // background-attachment: fixed;
+  min-height: 480px;
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -143,21 +143,15 @@ const IndexPage = props => {
        {/* <StyledCarouselContainer>
          <FullWidthCarousel items={items} />
         </StyledCarouselContainer> */}
-
         {/* <Slider /> */}
-
         <BGImage>
           <div style={{ zIndex: 1, position: 'absolute', top: 0, width: '100%' }}>
             <Title>
-            Twój górski azyl czeka na Ciebie! 
-            <SubTitle>Wynajmij wyjątkowy domek w Eko Zakątku i poczuj </SubTitle>
-            <SubTitle>magię natury!</SubTitle>
+            Twój górski azyl czeka na Ciebie!
             </Title>
-            
-            <StyledTradeLink>
-             <div className="" onClick={scrollToBottom}>
+            <SubTitle>Wynajmij wyjątkowy domek w Eko Zakątku i poczuj<br/>magię natury!</SubTitle>
+            <StyledTradeLink onClick={scrollToBottom}>
               Rezerwuj
-             </div>
             </StyledTradeLink>
           </div>
           <div style={{
@@ -170,8 +164,8 @@ const IndexPage = props => {
           }}>
           </div>
         </BGImage>
-        <BrandInfo />
         <Offer />
+        <BrandInfo />
         <Contact />
      </StyledBody>
     </Layout >

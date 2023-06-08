@@ -2,13 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby'
 import { Container, Row, Col } from 'reactstrap';
-import Massage from '../images/massage.svg'
-import Trip from '../images/trip.svg'
-import Bakery from '../images/bakery.svg'
+
 
 const BrandInfoContainer = styled.div`
-background-color: #f5f5f5;
-padding: 2rem;
+background-color: #e2ffe3;
+padding: 6rem 0;
 
 .button {
   float: right;
@@ -22,8 +20,8 @@ padding: 2rem;
   transition: all 1000ms;
   font-size: 15px;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 15px;
   overflow: hidden;
   outline: 2px solid #114426;
 }
@@ -75,7 +73,7 @@ h2 {
   h3 {
     font-size: 1.5rem;
     margin-bottom: 0.8rem;
-    color: #207216;
+    color: #154010;
     font-weight: bold;
 
   }
@@ -83,7 +81,7 @@ h2 {
   p {
     font-size: 1.1rem;
     line-height: 1.5;
-    color: #207216;
+    color: #154010;
     margin-bottom: 3rem;
   }
 }
@@ -150,51 +148,40 @@ function BrandInfo() {
           <Row>
             <Col style={{position:'relative'}} sm="4">
               <div className="brand-info__item">
-                <img 
-                img src={Trip} alt="trip" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/svg%2FFamily%20going%20on%20a%20trip.svg?alt=media&token=c640b7ec-952e-4beb-b7dc-0e805c24a090" alt="trip" />
                 <div>
                   <h3>Wypoczynek z całą rodziną</h3>
                   <p>Zrelaksuj się w naszych górskich domkach i ciesz się niezapomnianym wypoczynkiem z całą rodziną. Odkryj uroki przyrody i twórz niezapomniane wspomnienia, które będą ciepło Was otaczać.</p>
                 </div>
               </div>
-              {/* <a class ="button" href="/about">Więcej</a> */}
-              {/* <StyledTradeLink2 href="/noclegi">
-              Więcej
-            </StyledTradeLink2> */}
+            <a href="https://www.eko-zakatek.pl/oferta">
             <button className="button">
               Więcej
             </button>
+            </a>
             </Col>
             <Col style={{position:'relative'}} sm="4">
               <div className="brand-info__item">
-                <img src={Massage} alt="massage" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/svg%2FInternational%20business%20meeting.svg?alt=media&token=1bd97c5d-51e6-400e-8d7a-e402efa037e0" alt="massage" />
                 <div>
                   <h3>Zero Waste</h3>
                   <p>W Eko Zakątku promujemy zrównoważony styl życia i zero waste. Naucz się praktycznych sposobów minimalizowania odpadków i twórz pozytywny wpływ na środowisko.</p>
                 </div>
               </div>
-              {/* <StyledTradeLink to="/zeroWaste">
-             <div className="">
-              Więcej
-             </div>
-            </StyledTradeLink> */}
+              <a href="https://www.eko-zakatek.pl/zeroWaste">
             <button className="button">
               Więcej
             </button>
+            </a>
             </Col>
             <Col style={{position:'relative'}} sm="4">
               <div className="brand-info__item">
-                  <img src={Bakery} alt="bakekry-training" />               
+                  <img src="https://firebasestorage.googleapis.com/v0/b/eco-zakatek.appspot.com/o/svg%2FBakery%20owners%20making%20Bread.svg?alt=media&token=348d9ee1-45e7-4127-bc71-98a7637d4689" alt="bakekry-training" />               
                    <div>
                   <h3>Warsztaty</h3>
                   <p>Rozwijaj swoje pasje i zdobywaj nowe umiejętności na naszych inspirujących warsztatach. Dołącz do nas, aby czerpać kreatywną energię i odkrywać tajniki ekologicznego stylu życia.</p>
                 </div>
               </div>
-              {/* <StyledTradeLink to="/warsztaty">
-             <div className="">
-              Więcej
-             </div>
-            </StyledTradeLink> */}
             <a href="https://www.eko-zakatek.pl/warsztaty">           
             <button className="button">
               Więcej

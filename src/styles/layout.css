@@ -712,6 +712,9 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+  .europeSign{
+    margin-right: 0!important;
+  }
 }
 
 .line-numbers .line-numbers-rows {
@@ -786,12 +789,20 @@ pre tt:after {
 
 .myLogo {
   margin: 0;
-  width: 85px;
-  height: 85px;
+  width: 160px;
+  /* height: 85px; */
   margin-right: 0.35rem;
   transform: rotate(0deg);
   transition: transform 0.2s linear;
+  
+
 }
+  @media (max-width: 700px) {
+    .myLogo{
+      width: 100px;
+    }
+  }
+
 .europeSign {
   color: white;
   margin: 0;
@@ -802,6 +813,20 @@ pre tt:after {
   transition: transform 0.2s linear;
 }
 
+
+.europeSignTop {
+  color: white;
+  width: 32px;
+  padding-top: 20px;
+  padding-right: 7px;
+}
+@media (max-width: 940px) {
+  .europeSignTop{
+    padding-top: 0px;
+  }
+}
+
 .myLogo:hover {
   transform: rotate(-10deg);
 }
+

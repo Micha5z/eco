@@ -5,12 +5,18 @@ import { useMediaQuery } from '@react-hook/media-query'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import Menu from './menu'
-import Logo from '../images/logo.jpg'
+import Logo from '../images/Logo.png'
+import LogoMobile from '../images/LogoMobile.png'
 import MenuIcon from '../images/menu.inline.svg'
 import CloseIcon from '../images/x.inline.svg'
 import { Sun, Moon, Facebook, Instagram } from 'react-feather'
 import { useDarkMode } from '../contexts/Application'
 import useDocumentScrollThrottled from '../utils/useDocumentScrollThrottled'
+
+
+import EuroSignBlack from '../images/Europe.svg'
+import EuroSignWhite from '../images/Europewhite.svg'
+
 
 const StyledHeader = styled.header`
   display: flex;
@@ -72,26 +78,6 @@ const StyledNavTitleWrapper = styled.nav`
   
 `
 
-const StyledTradeLink = styled.a`
-  padding: 0.25rem 0.75rem;
-  background-color: ${({ theme }) => theme.textColor};
-  background: linear-gradient(128.17deg, #BD00FF -14.78%, #FF1F8A 110.05%);
-  text-decoration: none;
-  color: white;
-  border-radius: 12px;
-  display: inline-block;
-  font-weight: 500;
-  width: 100%;
-  width: min-content;
-  white-space: nowrap;
-  margin-left: 1rem;
-  border: 1px solid transparent;
-  box-shadow: ${({ theme }) => theme.shadows.small};
-  :hover,
-  :focus {
-    border: 1px solid white;
-  }
-`
 
 const StyledButton2 = styled.button`
   border: none;
@@ -125,9 +111,9 @@ const StyledButton = styled.button`
   border: none;
   background-color: rgba(0, 0, 0, 0);
   path {
-    fill: ${({ theme, open, showBG }) => (showBG && !open ? theme.textColor : 'white')};
+    fill: ${({ theme }) => (theme.textColor)};
   }
-  color: ${({ theme, open, showBG }) => (showBG && !open ? theme.textColor : 'white')};
+  color: ${({ theme }) => (theme.textColor)};
   
   :focus {
     outline: none;
@@ -137,6 +123,7 @@ const StyledButton = styled.button`
   justify-content: center;
   :hover {
     cursor: pointer;
+    opacity: 0.7;
   }
 
   @media (max-width: 960px) {
@@ -146,6 +133,7 @@ const StyledButton = styled.button`
     color: ${({ theme }) => (theme.textColor)};  
   }
 `
+
 
 const StyledHomeLink = styled(Link)`
   max-height: 48px;
@@ -173,6 +161,21 @@ const MenuToggle = styled.button`
     top: ${({ open }) => (open ? '1.5rem' : 'initial')};
   }
 `
+const StyledFooterLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${({ theme }) => theme.colors.whiteBlack};
+  :hover {
+    color: ${({ theme }) => theme.colors.whiteBlack};
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  @media (max-width: 940px) {
+    align-items: normal;
+    justify-content: none;
+    }
+`
 
 const StyledCloseIcon = styled(CloseIcon)`
   path {
@@ -192,8 +195,10 @@ const Header = () => {
   const button = useRef()
   const [isMenuOpen, updateIsMenuOpen] = useState(false)
   const [darkMode, toggleDarkMode] = useDarkMode()
+  const EuroSign = darkMode ? EuroSignWhite : EuroSignBlack
 
   const [headerBG, setHeaderBG] = useState(false)
+  const isMobile = useMediaQuery( 'maxWidth: 700px');
 
   useDocumentScrollThrottled(callbackData => {
     const { currentScrollTop } = callbackData
@@ -251,12 +256,12 @@ const Header = () => {
           <img
             alt='logo'
             className='myLogo'
-            src={Logo}
+            src={isMobile ? LogoMobile : Logo}
           />
         </StyledHomeLink>
       </StyledNavTitleWrapper>
 
-      <StyledButton2 target="_blank" open={isMenuOpen} showBG={headerBG}
+      <StyledButton2 target="_blank"
           href="https://facebook.pl">
           {<Facebook size={20}/>}
         </StyledButton2>
@@ -274,6 +279,17 @@ const Header = () => {
         {data.site.siteMetadata.menulinks.map(item => {
           return <Menu key={item.name} data={item} />
         })}
+      <StyledFooterLink to="https://sniadanioteka.pl/sites/default/files/fundusze_unijne_.pdf">            
+                    <img
+            alt='euro'
+            src={EuroSign}
+            className='europeSignTop'
+          />
+          <div style={{}}>
+          Projekt UE
+            </div>
+          </StyledFooterLink>
+
           <StyledButton target="_blank" open={isMenuOpen} showBG={headerBG}
           href="https://facebook.pl">
           {<Facebook size={20}/>}
@@ -282,14 +298,12 @@ const Header = () => {
           href="https://instagram.pl">
           {<Instagram size={20}/>}
         </StyledButton>
+
+        
+
         <StyledButton type="button" open={isMenuOpen} showBG={headerBG} onClick={toggleDarkMode}>
           {darkMode ? <Sun size={20} /> : <Moon size={20} />}
         </StyledButton>
-        {/* <StyledTradeLink
-          target="_blank"
-          href="https://play.google.com/store/apps/developer?id=Eko-zakatek">
-          Download our apps
-        </StyledTradeLink> */}
       </StyledNav>
     </StyledHeader>
   )

@@ -15,6 +15,7 @@ const ContactContainer = styled.div`
   padding: 3rem;
   position: relative;
   overflow: hidden;
+  padding: 6rem 0;
 
   @media (min-width: 961px) {
     background-attachment: fixed;
@@ -29,7 +30,7 @@ const ContactContainer = styled.div`
     height: 100%;
     background-color: rgba(0,0,0,0.8);
     z-index: 0;
-    filter: blur(10px);
+    // filter: blur(10px);
   }
 
   h2 {
@@ -77,13 +78,13 @@ const ContactContainer = styled.div`
       font-weight: bold;
       letter-spacing: 5px;
       text-transform: uppercase;
-      color: #114426;
+      color: #154010;
       background-color: #ffffff;
       transition: all 1000ms;
       font-size: 15px;
       position: relative;
       overflow: hidden;
-      outline: 2px solid #114426;
+      outline: 2px solid #154010;
     }
     
     button:hover {
@@ -233,7 +234,7 @@ function Contact() {
             <div className="contact-info">
               <h2>Dane Kontaktowe</h2>
               <p>
-                <strong>Adres:</strong>  ul. Pigwowa 16, 34-300 Żywiec
+                <strong>Adres:</strong>  ul. Aloesowa 4, 34-324 Ostre
 
               </p>
               <p>

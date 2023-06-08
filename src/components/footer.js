@@ -2,6 +2,12 @@ import { Link } from 'gatsby'
 import React from 'react'
 import styled from 'styled-components'
 import Github from '../images/github.inline.svg'
+import EuroSignBlack from '../images/Europe.svg'
+import EuroSignWhite from '../images/Europewhite.svg'
+import SniadaniotekaSignBlack from '../images/sniadaniotekablack.svg'
+import SniadaniotekaSignWhite from '../images/sniadaniotekawhite.svg'
+
+
 import { useDarkMode } from '../contexts/Application'
 
 const StyledFooter = styled.footer`
@@ -12,9 +18,15 @@ const StyledFooter = styled.footer`
   color: ${({ theme }) => theme.colors.whiteBlack};
   position: relative;
   padding: 2rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.whiteBlack};
 
   @media (max-width: 960px) {
-    padding: 1rem;
+    padding: 1.1rem;
+    text-align: center;
+    
+  }
+  @media (max-width: 340px){
+    font-size: 12px;
   }
 `
 
@@ -25,8 +37,8 @@ const StyledFooterLinkSection = styled.ul`
   margin: 0;
   justify-content: space-between;
   width: 100%;
-  // color: ${({ theme }) => theme.colors.whiteBlack};
-  // color: black;
+  padding-left: 0rem;
+}
 
 `
 
@@ -35,11 +47,15 @@ const StyledFooterSection = styled.div`
   flex-direction: row;
   align-items: center;
   margin: 0;
-  
 `
 
 const StyledFooterLink = styled(Link)`
   color: ${({ theme }) => theme.colors.whiteBlack};
+  :hover {
+    color: ${({ theme }) => theme.colors.whiteBlack};
+    cursor: pointer;
+    opacity: 0.7;
+  }
 `
 
 const StyledGithub = styled(Github)`
@@ -52,7 +68,8 @@ const StyledGithub = styled(Github)`
 
 const Footer = () => {
   const [darkMode, toggleDarkMode] = useDarkMode()
-
+  const EuroSign = darkMode ? EuroSignWhite : EuroSignBlack
+  const SniadaniotekaSign = darkMode ? SniadaniotekaSignWhite : SniadaniotekaSignBlack
   return (
     <StyledFooter>
       <StyledFooterLinkSection>
@@ -65,10 +82,11 @@ const Footer = () => {
                     
                     <img
             alt='euro'
+            src={EuroSign}
             className='europeSign'
-            src='https://upload.wikimedia.org/wikipedia/commons/f/f8/Stars_of_the_European_Union_%28bw%29.svg'
             style={{
               width: 30,
+              height:30,
               fill: darkMode ? 'white' : 'black',
             }}
           />
@@ -77,11 +95,21 @@ const Footer = () => {
             </div>
           
           </StyledFooterLink>
+          
         </StyledFooterSection>
-
-        {/* <a style={{ marginLeft: 16 }} href="https://github.com/web2app-app" rel="noopener noreferrer" target="_blank">
-          https://upload.wikimedia.org/wikipedia/commons/f/f8/Stars_of_the_European_Union_%28bw%29.svg
-        </a> */}
+        <StyledFooterLink to="https://sniadanioteka.pl" style={{float:'right'}}>
+          <img
+            alt='sniadaniotekaLogo'
+            src={SniadaniotekaSign}
+            className='europeSign'
+            style={{
+              marginLeft: 10,
+              width: 55,
+              height: 55,
+              fill: darkMode ? 'white' : 'black',
+            }}
+          />  
+          </StyledFooterLink>
       </StyledFooterLinkSection>
     </StyledFooter>
   )
